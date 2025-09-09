@@ -18,7 +18,7 @@ df.loc['1995'] = [390000, 205000 , 345000]
 
 st.dataframe(df)
 st.markdown("**Como podemos evidenciar en el siguiente gráfico, se han utilizado las herramientas visuales erróneas** ")
-st.image("img\Imagen1.gif", caption="Gráfico anterior, con errores visuales")
+st.image("Imagen1.gif", caption="Gráfico anterior, con errores visuales")
 
 errores = ["Mala selección de gráfico: En gráficos que se narran a travez del tiempo, se deben utilizar gráficos de columnas agrupadas en donde las leyendas estén bien definidas.", "Error de categorización: La categorización o labels están mal definidos, según la teoría en un gráfico de barra el tiempo debe estar en el eje X.", "Formato 3D poco recomendable: Se recomienda utilziar gráficos 2D."]
 error = st.radio("Errores analizados en este Dataframe:", errores)
@@ -67,5 +67,6 @@ growth_chart = alt.Chart(df_growth_melt).mark_line(point=True).encode(
 st.altair_chart(growth_chart, use_container_width=True)
 
 st.markdown("**En conclusión:**")
+
 
 st.markdown("**Hawaiian Club lidera en ingresos, pero pierde fuerza. French Riviera tiene movimientos similares a Hawaiian (posibles competidores directos). Bahamas Beach es el lugar con mayor crecimiento y aumento de participación → tendencia positiva clara.**")
